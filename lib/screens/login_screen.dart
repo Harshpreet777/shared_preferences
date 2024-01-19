@@ -65,16 +65,20 @@ class _LoginScreenState extends State<LoginScreen> {
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     controller: emailController,
                     decoration: InputDecoration(
-                        hintText: 'Enter Your Email',
-                        filled: true,
-                        fillColor: ColorConstant.lightGrey,
-                        hintStyle: TextStyle(color: ColorConstant.grey),
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: ColorConstant.borderColorE8ECF4,
-                                width: 1),
-                            borderRadius:
-                                const BorderRadius.all(Radius.circular(8)))),
+                      errorBorder: InputBorder.none,
+                      hintText: 'Enter Your Email',
+                      filled: true,
+                      fillColor: ColorConstant.lightGrey,
+                      focusedErrorBorder: InputBorder.none,
+                      hintStyle: TextStyle(color: ColorConstant.grey),
+                      focusedBorder: const UnderlineInputBorder(
+                          borderSide: BorderSide.none),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                              color: ColorConstant.borderColorE8ECF4, width: 1),
+                          borderRadius:
+                              const BorderRadius.all(Radius.circular(8))),
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -98,6 +102,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     controller: passController,
                     decoration: InputDecoration(
+                      errorBorder: InputBorder.none,
+                      focusedErrorBorder: InputBorder.none,
+                      focusedBorder: InputBorder.none,
                         hintText: 'Enter Your Password',
                         filled: true,
                         fillColor: ColorConstant.lightGrey,
